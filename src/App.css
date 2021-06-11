@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+  
   }
+  .bubbleWrapper {
+      padding: 10px 10px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      /* align-self: flex-end; */
+    color: #fff;
+  }
+  .inlineContainer {
+    display: inline-flex;
+  }
+  .inlineContainer.own {
+    flex-direction: row-reverse;
+  }
+  .inlineIcon {
+    width: 50px;
+    object-fit: contain;
+    height: 50px;
+    border-radius: 100%;
+    padding: 5px 0px;
+  }
+  .ownBubble {
+      min-width: 60px;
+      max-width: 700px;
+      padding: 14px 18px;
+      margin: 6px 8px;
+      background-color: #5b5377;
+      border-radius: 16px 16px 0 16px;
+      border: 1px solid #443f56;
+   
+  }
+  .otherBubble {
+      min-width: 60px;
+      max-width: 700px;
+      padding: 14px 18px;
+    margin: 6px 8px;
+      background-color: #6C8EA4;
+      border-radius: 16px 16px 16px 0;
+      border: 1px solid #54788e;
+    
+  }
+  .own {
+      align-self: flex-end;
+  }
+  .other {
+      align-self: flex-start;
+  }
+  span.own,
+  span.other{
+    font-size: 14px;
+    color: grey;
+  }
+
+form {
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(24, 23, 23);
+    width: 100%;
+    max-width: 728px;
+    display: flex;
+    font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
+form button {
+    /* width: 20%; */
+    background-color: rgb(56, 56, 143);
+  }
+
+  input {
+    line-height: 1.5;
+    width: 100%;
+    font-size: 1.5rem;
+    background: rgb(58, 58, 58);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+  }
+  
+  button {
+    background-color: #282c34; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+main {
+    padding: 10px;
+    height: 80vh;
+    margin: 10vh 0 10vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .App {
+    text-align: center;
+    max-width: 728px;
+    margin: 0 auto;
+  }
+
+  .App section {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    min-height: 100vh;
+    background-color: rgb(40, 37, 53);
+  }
+
+  .messageBox{
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow: auto;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .innerMessageBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+  }
+
+nav{
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    background-color: rgb(24, 23, 23);
+    width: 100%;
+    max-width: 728px;
+    /* display: flex; */
+    font-size: 1.5rem;
+
+    
+}
+
+.navContainer{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    justify-content: flex-end;
+    background-color:rgb(58, 58, 58);
+}
+.signOut{
+  border-radius: 10pt;
+    margin: 10pt;
+}
+.AppTitle{
+  flex: auto;color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signInButton{
+  margin: auto;
+    border-radius: 20px;
+    background: #756d96;
 }
